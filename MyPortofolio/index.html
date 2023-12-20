@@ -9,6 +9,8 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>My Portofolio | Dzaky Alif Gunawan</title>
 </head>
 
@@ -32,9 +34,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#project">Projects</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -42,9 +41,8 @@
 
     <!-- Section 1 -->
     <div class="jumbotron text-center">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-            featured content or information.</p>
+        <h1 class="name display-4"></h1>
+        <p class="lead"></p>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#ffffff" fill-opacity="1"
                 d="M0,256L40,218.7C80,181,160,107,240,90.7C320,75,400,117,480,149.3C560,181,640,203,720,176C800,149,880,75,960,85.3C1040,96,1120,192,1200,202.7C1280,213,1360,139,1400,101.3L1440,64L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
@@ -56,18 +54,14 @@
     <section id="about">
         <div class="container">
             <div class="row text-center mb-3">
-                <div class="col">
+                <div class="col" data-aos="fade-down" data-aos-duration="1000">
                     <h2>About Me</h2>
                 </div>
             </div>
             <div class="row justify-content-center fs-5 text-center">
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora nemo ipsam minus unde,
                         ipsum a? Odio quod vel non!</p>
-                </div>
-                <div class="col-md-4">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore itaque aliquid ullam cum at,
-                        modi ut aspernatur quas blanditiis sed?</p>
                 </div>
             </div>
         </div>
@@ -82,12 +76,12 @@
     <section id="project" class="project">
         <div class="container">
             <div class="row text-center mb-3">
-                <div class="col">
+                <div class="col" data-aos="fade-down" data-aos-duration="1000">
                     <h2>My Projects</h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 mb-3">
+                <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
                     <div class="card">
                         <img src="..." class="card-img-top" alt="...">
                         <div class="card-body">
@@ -96,7 +90,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="250">
                     <div class="card">
                         <img src="..." class="card-img-top" alt="...">
                         <div class="card-body">
@@ -105,7 +99,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="350">
                     <div class="card">
                         <img src="..." class="card-img-top" alt="...">
                         <div class="card-body">
@@ -132,6 +126,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
+    <!-- aos js -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/TextPlugin.min.js"></script>
+    <script>
+        gsap.registerPlugin(TextPlugin);
+        gsap.to('.lead', {duration: 2, delay: 1.5, text: 'LP3I Surabaya | ASE-S02'});
+        gsap.to('.name', {duration: 2, text: 'Dzaky Alif Gunawan'});
+    </script>
 </body>
 
 </html>
