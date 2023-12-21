@@ -10,3 +10,12 @@
 section {
     padding-top: 5rem;
 }
+
+footer div a {
+    text-decoration: none;
+}
+
+footer a:active {
+    background: blue;
+    transition: all .10s ease-in-out;
+}
